@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <!--meta tags-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="real estate">
+    <meta name="keyword" content="mansions,home,realestate,rentals,sales,apartments">
+    <meta name="author" content="kiamakelvin">
+    <meta http-equiv="refresh" content="100">
+ <title>B.I.G real estates</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!--favicon link-->
+    <link rel="shortcut icon" type="x/image-icon" href="images/favicon.ico">
+    <!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+  </head>
+  <!--end of head-->
+  <!--start body-->
+  <body>
+  <!--start head-->
+  <header class="header" >
+  <!--header container start-->
+    <div class="container ">
+     <div class="col-md-7 icon animated zoomInRight">
+     <!--social links-->
+        <ul class="top-icons">
+          <li><a href="https://www.twitter.com" target="_blank"><img src="images/twitter.png"></a></li>
+          <li><a href="https://www.facebook.com.com" target="_blank"><img src="images/facebook.png"></a></li>
+          <li><a href="https://www.google.com" target="_blank"><img src="images/googleplus.png"></a></li>
+          <li><a href="https://www.linkedin.com" target="_blank"><img src="images/linkedin.png"></a></li>
+          <li><a href="https://www.youtube.com" target="_blank"><img src="images/youtube.png"></a></li>
+          <li><a href="https://www.pinterest.com" target="_blank"><img src="images/pinterest.png"></a></li>
+        </ul>
+        </div>
+        <!--end social links-->
+        <!--user account details-->
+    <div class="col-md-5 icon animated zoomInLeft">
+        <ul class="top-icons-right">
+          <li><a href="http://www.gmail.com" target="_blank"><img src="images/emails1.png"><span> realestate@big.com</span></a></li>
+          <li><a href="#"><span onclick="login()";>login</span></a></li>
+          <li>|</li>
+          <li><a href="#" ><span  onclick="register()";>register</span></a></li>
+             <li><a href="#" ><span class="glyphicon glyphicon-search" onclick="search()" ></span></a></li>
+        </ul>
+        <form class="form-input" id="searchme">
+          <input type="text"   placeholder="search">
+          <button >search</button>
+        </form>
+    </div>
+    <!--end of account details links-->
+  </div>
+  <!--container end-->
+ <!-- Modal  login-->
+  <div id="login" role="dialog" class="modal">
+
+    <div class="formcontainer">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close"  onclick="shut()";>&times;</button>
+          <h4 style="color:green;" class="text-center"><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+              <input type="checkbox" value="" checked>Remember me <span class="pull-right"><a href="#">ForgotPassword?</a></span>
+            <button type="submit" class="btn btn-default btn-success btn-block" ;><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-default pull-left" onclick="shut()">Cancel</button>
+          <p>Not a member? <a href="#"><span onclick="shut();register()">Sign Up</span> </a></p>
+          
+        </div>
+      </div>
+    </div>
+  </div> 
+  <!-- Modal  register-->
+  <div id="register" role="dialog" class="modal">
+
+    <div class="formcontainer">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close"  onclick="shut()";>&times;</button>
+          <h4 style="color:green;" class="text-center"><span class="glyphicon glyphicon-user"></span> signup</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+              <input type="text" class="form-control"  placeholder="first name">
+              <input type="text" class="form-control"  placeholder="last name">
+              <input type="text" class="form-control"  placeholder="email">
+              <input type="text" class="form-control"  placeholder="phone number">
+              <input type="radio"  name="gender" value="male" >  male
+              <input type="radio"  name="gender" value="female" >  female
+              <input type="date" class="pull-right">
+              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+              <input type="text" class="form-control" id="psw" placeholder="confirm password">
+              
+            <button type="submit" class="btn btn-default btn-success btn-block" ;> create account</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-default pull-left" onclick="shut()">Cancel</button>
+          <p>Have an account? <a href="#"><span onclick="shut();login()">Log In</a></span></p>
+          
+        </div>
+      </div>
+    </div>
+  </div> 
+<!--end modals-->
+  </header>
+<!-- nav bar-->
+<div class="container">
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><span class="text-success " title="big investments goons"><img src="images/big4.png"></span></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav link-list">
+        <li class="link current-link"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+        <li class="link"><a href="html/aboutus.html">About Us</a></li>
+        <li class="link"><a href="html/gallery.html">property</a></li>
+        <li class="link"><a href="html/blogs.html">Blogs</a></li>
+        <li class="link"><a href="html/contacts.html">Contact Us</a> </li>
+        <li class="link"><a href="html/faq.html">FAQ</a> </li>
+      </ul>
+      <!--contact info-->
+     <div class="conts text-align"><span class="phone-icon  round"><img src="images/phone.png"></span><span class="info">Call Us<br>0707414001<br>Sms 224433 </span>
+      </div>
+        <!--end of info-->
+      </div>
+    </div>
+    <!-- .navbar-collapse -->
+</nav>
+<!--end of nav -->
+</div>
+<!-- /.container -->
+
+<!--banner-->
+<div id="banner"> 
+<!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container1">
+<div class="ws_images"><ul>
+    <li><a href="http://wowslider.com" target="_blank"><img src="data1/images/banner.jpg" alt="responsive slider" title="24 Bedroom Mansion   PRICE: $21M" id="wows1_0"/></a>24 Bedrooms
+ 30 Bathroom  
+swimming pool and a great view 
+price $21m</li>
+    <li><img src="data1/images/banner2.jpg" alt="Nyali Mansion Price :$18M" title="Nyali Mansion Price :$18M" id="wows1_1"/>14 Bedrooms 10 Bathrooms 
+Swimming pool and a jakuzi</li>
+  </ul></div>
+  <div class="ws_bullets"><div>
+    <a href="#" title="24 Bedroom Mansion   PRICE: $21M"><span><img src="data1/tooltips/banner.jpg" alt="24 Bedroom Mansion   PRICE: $21M"/>1</span></a>
+    <a href="#" title="Nyali Mansion Price :$18M"><span><img src="data1/tooltips/banner2.jpg" alt="Nyali Mansion Price :$18M"/>2</span></a>
+  </div></div>
+</div>  
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+<!-- End WOWSlider.com BODY section -->
+</div>
+<!--end banner-->
+<!--search bar-->
+<section class=" search bg-img ">
+<div class="green-overlay ">
+<!--search form-->
+  <div class="container">
+  <div class="col-md-3">
+    <form class="search-form">
+        <input class="form-control" list="city" placeholder="city">
+        <!--list of dropdown-->
+         <datalist id="city">
+           <option>nairobi</option>
+           <option>nyeri</option>
+           <option>nakuru</option>
+           <option>nyahururu</option>
+        </datalist>
+        <!--end -->
+        </input> 
+       <br>
+       <input class="form-control" list="beds" placeholder="number of beds">
+       <!--list of dropdown-->
+         <datalist id="beds">
+           <option>1</option>
+           <option>2</option>
+           <option>3</option>
+           <option>4</option>
+           </datalist>
+        </input>
+           
+    </form>
+
+  </div>
+  <div class="col-md-3">
+  <form class="search-form">
+      <input class="form-control" list="estates" placeholder="estates">
+      <!--list of dropdown-->
+         <datalist id="estates">
+           <option>rongai</option>
+           <option>githurai 44</option>
+           <option>githurai 45</option>
+           <option>santon</option>
+          </datalist>
+        </input>
+        <br>
+          <input class="form-control" list="bath" placeholder="bathrooms">
+          <!--list of dropdown-->
+         <datalist id="bath">
+           <option>1</option>
+           <option>2</option>
+           <option>3</option>
+           <option>4</option>
+          </datalist>
+        </input>
+  </form>
+    
+  </div>
+  <div class="col-md-3">
+     <form class="search-form">
+      <input class="form-control" list="type" placeholder="type">
+      <!--list of dropdown-->
+         <datalist id="type">
+           <option>mansions</option>
+           <option>bungalow</option>
+           <option>4 bedrooms</option>
+           <option>3 bedrooms</option>
+           <option>2 bedrooms</option>
+           <option>1 bedrooms</option>
+          </datalist>
+        </input>
+        <br>
+          <input class="form-control"  type="range" name="price" min="20,000" max="8.5million">
+        </input>
+  </form>
+  </div>
+  <!--search form-->
+  <div class="col-md-3">
+     <form class="search-form">
+      <button class="btn btn-default btn-success">
+        <span><a href="">search property</a></span>
+      </button>
+      
+  </form>
+  </div>
+  
+  </div>
+  <!--end search container-->
+  </div>
+</section>
+<!--end seach bar-->
+<!--latest listing section-->
+<section class="container listing"> 
+<!--start of carousel -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+   <!--latest property heading-->
+  <div class="row latest-heading">
+  <div class="col-md-9"><span class="lead text-uppercase">latest property</span></div>
+  <!--see all button-->
+   <div class="col-md-2"><span><a href="html/gallery.html"><button class=" btn btn-success">see all</button></a></span></div>
+   <!--carousel controls-->
+  <div class="col-md-1 control">
+  <!--left control-->
+  <span> <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a></span>
+    <!--right--control-->
+    <span><a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a></span></div>
+    
+  </div>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+<!--carousel items-->
+      <div class="item active">
+        <!--article one-->  
+<article>
+    <div class="row">
+      <div class="col-md-3 listimg"><img class="img-responsive " src="images/house1.jpg" alt="house1 image">
+
+         <div class="likes"><img class="img-responsive likes-icon" src="images/likes1.png " alt="share image"> <img class="img-responsive likes-icon" src="images/share.png" alt="likes image">
+         </div>
+      </div>
+      <div class="col-md-3">
+        <span><img src="images/pointer.png" alt="ponter left"></span><h5 class="house-info1">umoja 7th court apartment</h5> <p class="house-info" >This property is strategicaly located has a large field and next to infrustuctures</p>
+         <div class="listing-info ">
+          <div class="col-md-6 text-center bg-success">
+            2.5M
+          </div>
+          <div class="col-md-6 text-center bg-warning">
+          onsale
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 listimg"><img class="img-responsive" src="images/house2.jpg" alt="house2 image">
+        <div class="likes"><img class="img-responsive likes-icon" src="images/likes1.png " alt="share image"> <img class="img-responsive likes-icon" src="images/share.png" alt="likes image"></div>
+      </div>
+      <div class="col-md-3"><span><img src="images/pointer.png" alt="ponter left"></span><h5 class="house-info1">umoja 7th court apartment</h5> <p class="house-info" >This property is strategicaly located has a large field and next to infrustuctures</p>
+
+        <div class="listing-info ">
+          <div class="col-md-6 text-center bg-success">
+            3.5M
+          </div>
+          <div class="col-md-6 text-center bg-warning">
+             on sale
+          </div>
+        </div>
+       </div>
+     </div>
+   <!--end row-->
+    <div class="row">
+      <div class="col-md-3"><span class="pull-right"><img src="images/pointer2.png" alt="ponter left"></span><br> <h5 class="house-info1">umoja 7th court apartment</h5> <p class="house-info" >This property is strategicaly located has a large field and next to infrustuctures</p>
+        <div class="listing-info ">
+          <div class="col-md-6 text-center bg-success">
+           1.5M
+          </div>
+          <div class="col-md-6 text-center bg-warning">
+           sold
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 listimg"><img class="img-responsive" src="images/house3.jpg" alt="house3 image">
+        <div class="likes"><img class="img-responsive likes-icon" src="images/likes1.png " alt="share image"> <img class="img-responsive likes-icon" src="images/share.png" alt="likes image">
+        </div>
+
+      </div>
+
+  
+     <div class="col-md-3"><span class="pull-right"><img src="images/pointer2.png" alt="ponter left"></span><br> <h5 class="house-info1">umoja 7th court apartment</h5> <p class="house-info" >This property is strategicaly located has a large field and next to infrustuctures</p>
+      <div class="listing-info ">
+        <div class="col-md-6 text-center bg-success">
+          2.5M
+        </div>
+        <div class="col-md-6 text-center bg-warning">
+          sold
+        </div>
+      </div>
+     </div>
+    <div class="col-md-3 listimg"><img class="img-responsive" src="images/house4.jpg" alt="house4 image">
+      <div class="likes"><img class="img-responsive likes-icon" src="images/likes1.png " alt="share image"> <img class="img-responsive likes-icon" src="images/share.png" alt="likes image">
+      </div>
+    </div>
+  </div>
+   <!--end row-->
+</article>
+<!--article two--> 
+      </div>
+
+  <div class="item">
+    <article>
+     <div class="row">
+      <div class="col-md-3 listimg"><img class="img-responsive" src="images/house3.jpg" alt="house1 image">
+
+        <div class="likes"><img class="img-responsive likes-icon" src="images/likes1.png " alt="share image"> <img class="img-responsive likes-icon" src="images/share.png" alt="likes image">
+        </div>
+      </div>
+    <div class="col-md-3"><span><img src="images/pointer.png" alt="ponter left"></span><h5 class="house-info1">umoja 7th court apartment</h5> <p class="house-info" >This property is strategicaly located has a large field and next to infrustuctures</p>
+      <div class="listing-info ">
+        <div class="col-md-6 text-center bg-success">
+         5.5M
+        </div>
+      <div class="col-md-6 text-center bg-warning">
+       on sale
+      </div>
+      </div>
+    </div>
+    <div class="col-md-3 listimg"><img class="img-responsive" src="images/house4.jpg" alt="house2 image">
+      <div class="likes"><img class="img-responsive likes-icon" src="images/likes1.png " alt="share image"> <img class="img-responsive likes-icon" src="images/share.png" alt="likes image">
+      </div>
+    </div>
+    <div class="col-md-3"><span><img src="images/pointer.png" alt="ponter left"></span><h5 class="house-info1">umoja 7th court apartment</h5> <p class="house-info" >This property is strategicaly located has a large field and next to infrustuctures</p>
+    <div class="listing-info ">
+      <div class="col-md-6 text-center bg-success">
+        2.5M
+      </div>
+      <div class="col-md-6 text-center bg-warning">
+        on sale
+      </div>
+    </div>
+    </div>
+  </div>
+   <!--end row-->
+  <div class="row">
+    <div class="col-md-3"><span class="pull-right"><img src="images/pointer2.png" alt="ponter left"></span><br><h5 class="house-info1">umoja 7th court apartment</h5> <p class="house-info" >This property is strategicaly located has a large field and next to infrustuctures</p>
+     <div class="listing-info ">
+      <div class="col-md-6 text-center bg-success">
+        2.5M
+      </div>
+      <div class="col-md-6 text-center bg-warning">
+      on sale
+      </div>
+    </div>
+    </div>
+    <div class="col-md-3 listimg"><img class="img-responsive" src="images/house1.jpg" alt="house3 image">
+      <div class="likes"><img class="img-responsive likes-icon" src="images/likes1.png " alt="share image"> <img class="img-responsive likes-icon" src="images/share.png" alt="likes image">
+      </div>
+    </div>
+
+  
+    <div class="col-md-3"><span class="pull-right"><img src="images/pointer2.png" alt="ponter left"></span><br><h5 class="house-info1">umoja 7th court apartment</h5> <p class="house-info" >This property is strategicaly located has a large field and next to infrustuctures</p>
+      <div class="listing-info ">
+        <div class="col-md-6 text-center bg-success">
+          1.5M
+        </div>
+       <div class="col-md-6 text-center bg-warning">
+        sold
+       </div>
+      </div>
+    </div>
+    <div class="col-md-3 listimg"><img class="img-responsive" src="images/house2.jpg" alt="house4 image">
+      <div class="likes"><img class="img-responsive likes-icon" src="images/likes1.png " alt="share image"> <img class="img-responsive likes-icon" src="images/share.png" alt="likes image">
+      </div>
+    </div>
+  </div>
+   <!--end row-->
+ </article>
+</div>
+    <!--article three--> 
+    <div class="item">
+     <article>
+      <div class="row">
+        <div class="col-md-3 listimg"><img class="img-responsive" src="images/house1.jpg" alt="house1 image">
+
+          <div class="likes"><img class="img-responsive likes-icon" src="images/likes1.png " alt="share image"> <img class="img-responsive likes-icon" src="images/share.png" alt="likes image">
+          </div>
+        </div>
+        <!--property information-->
+      <div class="col-md-3"><span><img src="images/pointer.png" alt="ponter left"></span><h5 class="house-info1">umoja 7th court apartment</h5> <p class="house-info" >This property is strategicaly located has a large field and next to infrustuctures</p>
+        <div class="listing-info ">
+          <div class="col-md-6 text-center bg-success">
+            0.5M
+          </div>
+          <div class="col-md-6 text-center bg-warning">
+          sold
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 listimg"><img class="img-responsive" src="images/house4.jpg" alt="house2 image">
+        <div class="likes"><img class="img-responsive likes-icon" src="images/likes1.png " alt="share image"> <img class="img-responsive likes-icon" src="images/share.png" alt="likes image">
+        </div>
+      </div>
+      <div class="col-md-3"><span><img src="images/pointer.png" alt="ponter left"></span><h5 class="house-info1">umoja 7th court apartment</h5> <p class="house-info" >This property is strategicaly located has a large field and next to infrustuctures</p>
+        <div class="listing-info ">
+          <div class="col-md-6 text-center bg-success">
+            2.5M
+          </div>
+          <div class="col-md-6 text-center bg-warning">
+           on sale
+          </div>
+        </div>
+
+      </div>
+      </div>
+   <!--end row-->
+      <div class="row">
+        <div class="col-md-3"><span class="pull-right"><img src="images/pointer2.png" alt="ponter left"></span><br><h5 class="house-info1">umoja 7th court apartment</h5> <p class="house-info" >This property is strategicaly located has a large field and next to infrustuctures</p>
+        <div class="listing-info ">
+          <div class="col-md-6 text-center bg-success">
+          3.5M
+          </div>
+          <div class="col-md-6 text-center bg-warning">
+          on sale
+          </div>
+        </div>
+        </div>
+      <div class="col-md-3 listimg"><img class="img-responsive" src="images/house3.jpg" alt="house3 image">
+        <div class="likes"><img class="img-responsive likes-icon" src="images/likes1.png " alt="share image"> <img class="img-responsive likes-icon" src="images/share.png" alt="likes image"></div>
+        </div>
+
+  
+      <div class="col-md-3"><span class="pull-right"><img src="images/pointer2.png" alt="ponter left"></span><br><h5 class="house-info1">umoja 7th court apartment</h5> <p class="house-info" >This property is strategicaly located has a large field and next to infrustuctures</p>
+        <div class="listing-info ">
+          <div class="col-md-6 text-center bg-success">
+            2.5M
+          </div>
+          <div class="col-md-6 text-center bg-warning">
+          on sale
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 listimg"><img class="img-responsive" src="images/house2.jpg" alt="house4 image">
+        <div class="likes"><img class="img-responsive likes-icon" src="images/likes1.png " alt="share image"> <img class="img-responsive likes-icon" src="images/share.png" alt="likes image"></div>
+        </div>
+      </div>
+   <!--end row-->
+    </article>
+  </div>
+<!--article four--> 
+    <div class="item">
+      <article>
+        <div class="row">
+          <div class="col-md-3 listimg"><img class="img-responsive" src="images/house1.jpg" alt="house1 image">
+
+            <div class="likes"><img class="img-responsive likes-icon" src="images/likes1.png " alt="share image"> <img class="img-responsive likes-icon" src="images/share.png" alt="likes image"></div>
+          </div>
+          <div class="col-md-3"><span><img src="images/pointer.png" alt="ponter left"></span><h5 class="house-info1">umoja 7th court apartment</h5> <p class="house-info" >This property is strategicaly located has a large field and next to infrustuctures</p>
+            <div class="listing-info">
+              <div class="col-md-6 text-center bg-success">
+                1.5M
+              </div>
+              <div class="col-md-6 text-center bg-warning">
+                sold
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 listimg"><img class="img-responsive" src="images/house3.jpg" alt="house2 image">
+            <div class="likes"><img class="img-responsive likes-icon" src="images/likes1.png " alt="share image"> <img class="img-responsive likes-icon" src="images/share.png" alt="likes image">
+            </div>
+          </div>
+          <div class="col-md-3"><span><img src="images/pointer.png" alt="ponter left"></span><h5 class="house-info1">umoja 7th court apartment</h5> <p class="house-info" >This property is strategicaly located has a large field and next to infrustuctures</p>
+           <div class="listing-info">
+              <div class="col-md-6 text-center bg-success">
+                2.5M
+              </div>
+              <div class="col-md-6 text-center bg-warning">
+               on sale
+              </div>
+           </div>
+
+          </div>
+        </div>
+   <!--end row-->
+        <div class="row">
+          <div class="col-md-3"><span class="pull-right"><img src="images/pointer2.png" alt="ponter left"></span><br><h5 class="house-info1">umoja 7th court apartment</h5> <p class="house-info" >This property is strategicaly located has a large field and next to infrustuctures</p>
+            <div class="listing-info">
+              <div class="col-md-6 text-center bg-success">
+                3.5M
+              </div>
+              <div class="col-md-6 text-center bg-warning">
+              on sale
+               </div>
+            </div>
+          </div>
+          <div class="col-md-3 listimg"><img class="img-responsive" src="images/house4.jpg" alt="house3 image">
+            <div class="likes"><img class="img-responsive likes-icon" src="images/likes1.png " alt="share image"> <img class="img-responsive likes-icon" src="images/share.png" alt="likes image">
+            </div>
+          </div>
+
+  
+          <div class="col-md-3"><span class="pull-right"><img src="images/pointer2.png" alt="ponter left"></span><br><h5 class="house-info1">umoja 7th court apartment</h5> <p class="house-info">This property is strategicaly located has a large field and next to infrustuctures</p>
+            <div class="listing-info">
+              <div class="col-md-6 text-center bg-success">
+                2.5M
+              </div>
+              <div class="col-md-6 text-center bg-warning">
+               on sale
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 listimg"><img class="img-responsive" src="images/house2.jpg" alt="house4 image">
+            <div class="likes"><img class="img-responsive likes-icon" src="images/likes1.png " alt="share image"> <img class="img-responsive likes-icon" src="images/share.png" alt="likes image">
+            </div>
+          </div>
+        </div>
+  <!--end row-->
+      </article>
+    </div>
+  
+    </div>
+</div>
+  <!--end of carousel-->
+</section>
+ <!--end of section-->
+
+<!--start of features -->
+<section class="container">
+  <div class="row featured">
+    <div class="col-md-9 text-center"><span class="lead text-uppercase 
+      sale ">featured hot sale<br>dont miss out</span>
+    </div>
+    <div class="col-md-3 text-center" >Sale count down <p class="lead" id="timer"></p>
+    </div>
+      
+  </div> 
+  <div class="row  featured-m-image">
+    <div class="col-md-4 listimg"><img class="img-responsive" src="images/featured-house1.jpg" alt="featured-house1 image">
+      <div class="likes"><img class="img-responsive likes-icon" src="images/likes1.png " alt="share image"> <img class="img-responsive likes-icon" src="images/share.png" alt="likes image"/>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h5 class="house-info1 "><h5 class="text-center">GREEN SPAN ESTATE</h5> <p class="house-info">This property is strategicaly located has a lrge field and next to infrustuctures</p>
+     <article class="more-featured-info text-center">
+       <div class="col-md-4 more-featured-details ">bedrooms<br><br>7</div>
+       <div class="col-md-4 more-featured-details">bathrooms<br><br>5</div>
+       <div class="col-md-4 more-featured-details">rooms<br><br>30</div>
+     </article>
+      <div class="listing-info2">
+        <div class="col-md-6 text-center bg-success">
+          6.5M
+        </div>
+        <div class="col-md-6 text-center bg-warning">
+          on sale
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 featured-imgs">
+      <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+    <!-- Indicators --> 
+    <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+
+          <div class="item active">
+            <img class="img-responsive featuredrooms" src="images/featured-house2.jpg" alt="featured-house2 image"><img class="img-responsive" src="images/featured-house3.jpg" alt="featured-house3 image">
+          </div>
+
+          <div class="item">
+            <img class="img-responsive " src="images/featured-house4.jpg" alt="featured-house2 image" ><img class="img-responsive" src="images/featured-house5.jpg" alt="featured-house3 image">
+          </div>
+    
+          <div class="item">
+            <img class="img-responsive" src="images/featured-house6.jpg" alt="featured-house2 image"><img class="img-responsive" src="images/featured-house7.jpg" alt="featured-house3 image">
+          </div>
+
+      <div class="item">
+      <img class="img-responsive" src="images/featured-house2.jpg" alt="featured-house2 image"><img class="img-responsive" src="images/featured-house3.jpg" alt="featured-house3 image">
+      </div>
+  
+    </div>
+
+  <div class=featured-controls>
+    <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel2" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a></div>
+</div>
+ </div>
+ </div>
+</div>
+
+
+</section>
+</div>
+<section class="bg-img quicklinks round">
+<div class="green-overlay">
+  <div class="container text-center">
+    <div class="col-md-4 animated shake ">
+      <img class="img-responsive" src="images/home.png" alt="home icon">
+      <p>5 years experience</p>
+      <a href="html/aboutus.html">About Us</a>
+    </div>
+    <div class="col-md-4 animated shake">
+       <img class="img-responsive" src="images/likes.png" alt="home icon">
+       <p>Classic Property</p>
+      <a href="html/gallery.html">Property</a>
+    </div>
+
+    <div class="col-md-4 animated shake">
+       <img class="img-responsive" src="images/stars.png" alt="home icon">
+       <p>Great Customer Care</p>
+      <a href="html/contacts.html">Contact us</a>
+    </div>
+  </div>
+  </div>
+</section>
+<!--end of featured-->
+<!--start of our agents-->
+<section class="container">
+  <div class="row latest-heading">
+  <div class="col-md-10"><span class="lead text-uppercase">our team</span></div>
+  <div class="col-md-2"><span><a href="html/aboutus.html"><button class=" btn btn-success">see all</button></a></span></div>
+  </div> 
+  <div class="row text-center">
+  <div class="col-md-4 home-agent">
+      <img class="img-responsive " src="images/jayne.jpg" alt="agent image" style="padding:0 10px;">
+   
+  <div class="img-caption"><h5 class="agent-name">Sue kiama</h5>
+  <p>With over 10 year experience in the reakl estate market I believe I can understand my clients taste and find the perfect house for them</p>
+    <div class="icons" title="follow me">
+    <div class="icon animated zoomInRight">
+     <!--social links-->
+        <ul class="top-icons">
+          <li><a href="https://www.twitter.com" target="_blank"><img src="images/twitter1.png"></a></li>
+          <li><a href="https://www.facebook.com.com" target="_blank"><img src="images/facebook1.png"></a></li>
+          <li><a href="https://www.google.com" target="_blank"><img src="images/googleplus1.png"></a></li>
+          <li><a href="https://www.linkedin.com" target="_blank"><img src="images/linkedin1.png"></a></li>
+          <li><a href="https://www.youtube.com" target="_blank"><img src="images/youtube1.png"></a></li>
+          <li><a href="https://www.pinterest.com" target="_blank"><img src="images/pinterest1.png"></a></li>
+        </ul>
+        </div>
+    </div>
+  </div>
+  </div>
+   <div class="col-md-4 home-agent"><img class="img-responsive" src="images/brown.jpg" alt="agent image" style="padding:0 10px;">
+   <div class="img-caption"><h5 class="agent-name">Ewayne kiama</h5>
+  <p>As a real estate agent i believe its my responsibility to help client settle in their perfect home quickly and glady</p>
+  <div class="icons" title="follow me">
+    <div class="icon animated zoomInRight">
+     <!--social links-->
+        <ul class="top-icons">
+          <li><a href="https://www.twitter.com" target="_blank"><img src="images/twitter1.png"></a></li>
+          <li><a href="https://www.facebook.com.com" target="_blank"><img src="images/facebook1.png"></a></li>
+          <li><a href="https://www.google.com" target="_blank"><img src="images/googleplus1.png"></a></li>
+          <li><a href="https://www.linkedin.com" target="_blank"><img src="images/linkedin1.png"></a></li>
+          <li><a href="https://www.youtube.com" target="_blank"><img src="images/youtube1.png"></a></li>
+          <li><a href="https://www.pinterest.com" target="_blank"><img src="images/pinterest1.png"></a></li>
+        </ul>
+        </div>
+    </div>
+    
+  </div>
+  </div>
+   <div class="col-md-4 home-agent"><img class="img-responsive" src="images/mish.jpg" alt="agent image" style="padding:0 10px;">
+   <div class="img-caption"><h5 class="agent-name">Ewayne kiama</h5>
+  <p>Listening  to my clients taste is my greatest weapon in the real estate game thus always find the right house as per client desires</p>
+    <div class="icons" title="follow me">
+    <div class="icon animated zoomInRight">
+     <!--social links-->
+        <ul class="top-icons">
+          <li><a href="https://www.twitter.com" target="_blank"><img src="images/twitter1.png"></a></li>
+          <li><a href="https://www.facebook.com.com" target="_blank"><img src="images/facebook1.png"></a></li>
+          <li><a href="https://www.google.com" target="_blank"><img src="images/googleplus1.png"></a></li>
+          <li><a href="https://www.linkedin.com" target="_blank"><img src="images/linkedin1.png"></a></li>
+          <li><a href="https://www.youtube.com" target="_blank"><img src="images/youtube1.png"></a></li>
+          <li><a href="https://www.pinterest.com" target="_blank"><img src="images/pinterest1.png"></a></li>
+        </ul>
+        </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</section>
+<!--end of our agents-->
+<!--start news letter -->
+<section class="bg-img">
+<div class="green-overlay ">
+  <div class="container text-center ">
+    <form class="col-md-4">
+      <label><span>subscribe for<br>free monthly Newsletter</span></label>
+    </form>
+    <form class="col-md-4">
+      <input class="bg-success" type="email" placeholder="email" width="90%">
+    </form>
+    <form class="col-md-4">
+      <button class="bg-success btn">Subscribe</button>
+    </form>
+  </div> 
+  </div>
+</section>
+<!--end of news letter-->
+<!--testimonials section-->
+ <section class="container text-center ">
+
+<div id="myCarousel3" class="carousel slide " data-ride="carousel">
+    <!-- Indicators --> 
+    <div class="col-md-12 testimonials">
+ <h3>TESTIMONIALS</h3>
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel3" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel3" data-slide-to="1"></li>
+      <li data-target="#myCarousel3" data-slide-to="2"></li>
+      <li data-target="#myCarousel3" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+          <img class="img-responsive img-circle" src="images/ceo.jpg" alt="Avatar" style="width:80px">
+        <div class="text-center">
+        <span class="text-success">Mr Kiama Kelvin</span>
+         <p>"I found my current appartment on B.I.G realestates with extraodinary help from them and totally satisfied with the choise i made.All i had to do was tell them what kind of appartment i need and the location and within 24hrs I was settling down " </p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img class="img-responsive img-circle" src="images/sue.jpg" alt="Avatar" style="width:80px">
+        <div class="text-center">
+        <span class="text-success">Miss Charlene Wairimu</span>
+          <p>Aftr a transfer from nairobi to Nakuru i had a hard time find the perfect home  a friend recomended B.I.G Realestate I at first hesitated but later decided to why not .I was asigned an agent and within two days I was settling in .<br>The only thing i regret was hesitating </p>
+    </div>
+    </div>
+      <div class="item">
+        <img class="img-responsive img-circle" src="images/terry.jpg" alt="Avatar" style="width:80px">
+        <div class="text-center">
+        <span class="text-success">Mrs Elizabeth Kiama</span>
+          <p> Had a dilemma if to buy a home or build one decided to buy so i visited B.I.G Realestates was glady welcomed and asigned a very cheerfull agent who listenned to every detail of the kind of house i needed what shocked me was how the paid attention to even the small details i as a custiomer gave them i finally settle and thanks to B.I.G Realestate</p>
+        </div>
+      </div>
+
+      <div class="item">
+       <img class="img-responsive img-circle" src="images/ceo.jpg" alt="Avatar" style="width:80px">
+        <div class="text-center">
+        <span class="text-success">Mr Ewayne kiama</span>
+          <p>Shifting from one appartment  to  another was so hard so settle in an appartment i dnt like for a very long time  untill i found B.I.G Realestate who did a fine job in finding me the perfect apartment Am now in my dreams appartment happy settled.Thanks B.I.G  Realestate</p>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel3" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel3" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+ </div>
+   
+ </section>
+ <!-- end of testimonials-->
+ <!--footer-->
+ <footer class="bg-img">
+  <div class="green-overlay ">
+    <div class="container ">
+    <div class="row">
+    <div class="col-md-3">
+    <h3 class="text-left">Quick links</h3>
+    <ul class="quicklinks">
+        <li><a href="index.html">Home</a></li><br>
+        <li><a href="html/aboutus.html">About Us</a></li><br>
+        <li><a href="html/gallery.html">gallery</a> </li><br>
+        <li><a href="html/blogs.html">Blogs</a></li><br>
+        <li><a href="html/contacts.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="col-md-3">
+     <h3 class="text-left">Facebook feeds</h3>
+     <iframe src="https://feed.mikle.com/widget/v2/55945/" height="200px" width="100%" class="fw-iframe" scrolling="no" frameborder="0"></iframe> 
+    </div>
+    <div class="col-md-3">
+    <h3 class="text-left">Pay by</h3>
+
+      <img class="img-responsive bank-icons grey" src="images/equity.png">
+    <img class="img-responsive grey" src="images/Co.png">
+    <img class="img-responsive grey" src="images/MasterCard1.png">
+    <img class="img-responsive grey" src="images/airtel.png">
+    <img class="img-responsive grey" src="images/mpesa.png">
+    
+    </div>
+    <div class="col-md-3 contact-info">
+    <h3 class="text-left">Contact info</h3>
+   <span class="glyphicon glyphicon-map-marker btn"> Garden-City NBR</span>
+    <span class="glyphicon glyphicon-envelope btn"> realestate@big.com</span>
+    <span class="glyphicon glyphicon-phone-alt btn"> 000200-4433-12567</span>
+</div>
+    </div>
+    <nav class="row"> 
+    <div class="col-md-10">
+      <ol class="breadcrumb">
+  <li><a href="html/policy.html">Terms & Policy</a></li>
+  <li><a href="html/contacts.html">Contact Support</a></li>
+  <li><a href="html/career.html">Career</a></li>
+  <li><a href="html/faq.html">FAQ</a></li>
+</ol>
+<p>&copy; 2017 B.I.G investments </p>
+    </div>
+    <div class="col-md-2"><a href="#"><span class="text-success lead" title="big investments goons"><img src="images/big3.png"></span></a></div>
+    </nav>
+    </div>
+ </div>
+ </footer>
+ <!--end footer-->
+ <!-- feedback-->
+  <div class="feedback">
+  <h4 class="green" id="green" onclick="feedback()">feedback</h4>
+   <div class="modal" id="feedback">
+     <form>
+     <span class="pull-right close" onclick="feedbackx()">&times;</span>
+     <label class="text-center">enter your detail to send feedback</label>
+       <input type="text" placeholder="name" required>
+       <input type="email" placeholder="email" required>
+       <input type="no" placeholder="phone no" required>
+       <textarea placeholder="text"></textarea>
+
+       <fieldset class="rating">
+    <legend class="rateus">Please rate us</legend>
+    <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+    <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+    <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+    <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+    <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+
+</fieldset> 
+
+       
+       <button type="submit">submit</button>
+     </form>
+   </div>
+
+ </div>
+ <!--end feedback-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/style.js" ></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

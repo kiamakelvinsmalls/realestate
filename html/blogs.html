@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <!--meta tags-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="real estate">
+    <meta name="keyword" content="mansions,home,realestate,rentals,sales,apartments">
+    <meta name="author" content="kiamakelvin">
+    <meta http-equiv="refresh" content="100">
+ <title>B.I.G real estates</title>
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/animate.css">
+    <!--favicon link-->
+    <link rel="shortcut icon" type="x/image-icon" href="../images/favicon.ico">
+    <!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="../engine1/style.css" />
+<script type="text/javascript" src="../engine1/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+    
+  </head>
+  <!--end of head-->
+  <!--start body-->
+  <body>
+<!--start head-->
+  <header class="header" >
+  <!--header container start-->
+    <div class="container ">
+     <div class="col-md-7 icon animated zoomInRight">
+     <!--social links-->
+        <ul class="top-icons">
+          <li><a href="https://www.twitter.com" target="_blank"><img src="../images/twitter.png"></a></li>
+          <li><a href="https://www.facebook.com.com" target="_blank"><img src="../images/facebook.png"></a></li>
+          <li><a href="https://www.google.com" target="_blank"><img src="../images/googleplus.png"></a></li>
+          <li><a href="https://www.linkedin.com" target="_blank"><img src="../images/linkedin.png"></a></li>
+          <li><a href="https://www.youtube.com" target="_blank"><img src="../images/youtube.png"></a></li>
+          <li><a href="https://www.pinterest.com" target="_blank"><img src="../images/pinterest.png"></a></li>
+        </ul>
+        </div>
+        <!--end social links-->
+        <!--user account details-->
+    <div class="col-md-5 icon animated zoomInLeft">
+        <ul class="top-icons-right">
+          <li><a href="http://www.gmail.com" target="_blank"><img src="../images/emails1.png"><span> realestate@big.com</span></a></li>
+          <li><a href="#"><span onclick="login()";>login</span></a></li>
+          <li>|</li>
+          <li><a href="#" ><span  onclick="register()";>register</span></a></li>
+             <li><a href="#" ><span class="glyphicon glyphicon-search" onclick="search()" ></span></a></li>
+        </ul>
+        <form class="form-input" id="searchme">
+          <input type="text"   placeholder="search">
+          <button >search</button>
+        </form>
+    </div>
+    <!--end of account details links-->
+  </div>
+  <!--container end-->
+
+ <!-- Modal  login-->
+  <div id="login" role="dialog" class="modal">
+
+    <div class="formcontainer">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close"  onclick="shut()";>&times;</button>
+          <h4 style="color:green;" class="text-center"><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+              <input type="checkbox" value="" checked>Remember me <span class="pull-right"><a href="#">ForgotPassword?</a></span>
+            <button type="submit" class="btn btn-default btn-success btn-block" ;><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-default pull-left" onclick="shut()">Cancel</button>
+          <p>Not a member? <a href="#"><span onclick="shut();register()">Sign Up</span> </a></p>
+          
+        </div>
+      </div>
+    </div>
+  </div> 
+  <!-- Modal  register-->
+  <div id="register" role="dialog" class="modal">
+
+    <div class="formcontainer">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close"  onclick="shut()";>&times;</button>
+          <h4 style="color:green;" class="text-center"><span class="glyphicon glyphicon-user"></span> signup</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+              <input type="text" class="form-control"  placeholder="first name">
+              <input type="text" class="form-control"  placeholder="last name">
+              <input type="text" class="form-control"  placeholder="email">
+              <input type="text" class="form-control"  placeholder="phone number">
+              <input type="radio"  name="gender" value="male" >  male
+              <input type="radio"  name="gender" value="female" >  female
+              <input type="date" class="pull-right">
+              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+              <input type="text" class="form-control" id="psw" placeholder="confirm password">
+              
+            <button type="submit" class="btn btn-default btn-success btn-block" ;> create account</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-default pull-left" onclick="shut()">Cancel</button>
+          <p>Have an account? <a href="#"><span onclick="shut();login()">Log In</a></span></p>
+          
+        </div>
+      </div>
+    </div>
+  </div> 
+<!--end modals-->
+  </header>
+<!-- nav bar-->
+<div class="container">
+<nav class="navbar navbar-default ">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><span class="text-success " title="big investments goons"><img src="../images/big4.png"></span></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav link-list">
+        <li class="link "><a href="../index.html">Home<span class="sr-only">(current)</span></a></li>
+        <li class="link "><a href="aboutus.html">About Us</a></li>
+        <li class="link"><a href="gallery.html">property</a></li>
+        <li class="link current-link"><a href="blogs.html">Blogs</a></li>
+        <li class="link"><a href="contacts.html">Contact Us</a> </li>
+        <li class="link"><a href="faq.html">FAQ</a> </li>
+      </ul>
+      <!--contact info-->
+    <div class="conts text-align"><span class="phone-icon round"><img src="../images/phone.png"></span><span class="info">Call Us<br>0707414001<br>Sms 224433 </span>
+      </div>
+        <!--end of info-->
+      </div>
+    </div>
+    <!-- .navbar-collapse -->
+</nav>
+<!--end of nav -->
+</div>
+<section class="col-md-12 listingadd bg-img ">
+<div class="green-overlay container-fluid">
+<!--search form-->
+  <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+    <!-- Indicators --> 
+    <!-- Wrapper for slides -->
+     <div class="carousel-inner" role="listbox">
+
+     <div class="item active">
+      <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house2.jpg" alt="gallery21.jpg">
+      <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished kichten<br>
+          well finished edges<br>
+        </div>
+      </div>
+      </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house3.jpg" alt="gallery21.jpg">
+     <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished settingroom<br>
+          well finished edges<br>
+          good air circulation<br>
+        </div>
+      </div>
+       </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house4.jpg" alt="gallery21.jpg">
+       <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full equiped bathroom<br>
+          hotshower and tab<br>
+           dressing mirror <br>
+        </div>
+      </div>
+       </div>
+        <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house5.jpg" alt="gallery21.jpg">
+          <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished livingroom<br>
+          good air circulation<br>
+          enough lighting for study<br>
+        </div>
+      </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house6.jpg" alt="gallery21.jpg">
+         <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished waitingroom<br>
+          well finished edges<br>
+          good air circulation<br>
+        </div>
+      </div>
+        </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house7.jpg" alt="gallery21.jpg">
+         <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished bedroom<br>
+          beautiful view<br>
+          good air circulation<br>
+        </div>
+      </div>
+       </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house2.jpg" alt="gallery21.jpg">
+        <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished kichten<br>
+          well finished edges<br>
+        </div>
+      </div>
+       </div>
+        <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house3.jpg" alt="gallery21.jpg">
+         <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished settingroom<br>
+          well finished edges<br>
+          good air circulation<br>
+        </div>
+      </div>
+        </div>
+      </div>
+    
+      <div class="item">
+        <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house7.jpg" alt="gallery21.jpg">
+        <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished bedroom<br>
+          beautiful view<br>
+          good air circulation<br>
+        </div>
+      </div>
+        </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house6.jpg" alt="gallery21.jpg">
+       <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished waitingroom<br>
+          well finished edges<br>
+          good air circulation<br>
+        </div>
+      </div>
+
+       </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house4.jpg" alt="gallery21.jpg">
+       <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full equiped bathroom<br>
+          hotshower and tab<br>
+           dressing mirror <br>
+        </div>
+      </div>
+       </div>
+        <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house3.jpg" alt="gallery21.jpg">
+        <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished kichten<br>
+          well finished edges<br>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+
+  <div>
+    <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel2" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a></div>
+</div>
+  
+  </div>
+  </section>
+
+  <!--end search container-->
+    <nav  id="breadcrumb-fixed" class="breadcrumb breadcrumb-fixed">
+  <a class="breadcrumb-item" href="../index.html">Home</a>
+   <a class="breadcrumb-item" href="aboutus.html">About Us</a>
+    <a class="breadcrumb-item" href="gallery.html">property</a>
+  <span class="breadcrumb-item active">Blogs</span>
+</nav>
+
+<section class="container">
+<div class="col-md-9">
+<div class="row">
+  <h4>Women Make Their Mark on Global Real Estate</h4>
+
+  <div class="line"></div>
+<article class="col-md-8 blog">
+  <p>
+  Real estate was once considered a man’s world - an industry dominated by male property agents, brokers and investors. Increasingly women are breaking through any perceived glass ceiling to find a wealth of opportunities available to them in this traditionally male-dominated field.... <a href="http://jamhurimagazine.com/index.php/kenya-real-estate/5171-women-make-their-mark-on-global-real-estate.html" target="blank"><b>Full story</b></a> 
+</p>
+</article>
+<aside class="col-md-4">
+ <img src="../images/sue.jpg" class="img-responsive">
+</aside>
+</div>
+  
+
+
+  <div class="row">
+ <h4>Top Mistakes Made by First Time Home Buyers</h4>
+  <div class="line"></div>
+  <aside class="col-md-4">
+ <img src="../images/Lamudi.Kenya_mistakes.jpg" class="img-responsive">
+</aside>
+<article class="col-md-8 blog">
+  <p>Buying a home will no doubt be one of the biggest purchases you ever make. As a first time home owner, you need to be especially careful to plan out your property purchase. You need to look at your financial needs, as well as your long and short term for the property. Leading property portal Lamudi takes a look at the key mistakes first time home owners make....<a href="http://jamhurimagazine.com/index.php/kenya-real-estate/5163-top-mistakes-made-by-first-time-home-buyers.html" target="blank"><b>Full story</b></a>  </p>
+</article>
+
+</div>
+
+
+<div class="row">
+  <h4 >How to Spot a Real Estate Scam</h4>
+  <div class="line"></div>
+<article class="col-md-8 blog">
+  <p>The property listing almost looks too good to be true - it is in the perfect location, has beautiful photos and is well below your budget. You send off an enquiry and receive a quick response: the landlord is currently overseas and cannot show you the home. But if you can wire through a deposit as soon as possible, the property is yours....  <a href="http://jamhurimagazine.com/index.php/kenya-real-estate/5185-how-to-spot-a-real-estate-scam.html" target="blank"><b>Full story</b></a>  </p>
+</article>
+<aside class="col-md-4">
+<img src="../images/Machakos.City_scam.jpg" class="img-responsive">
+</aside>
+</div>
+
+<div class="row">
+  <h4 >Avoid Falling Victim to Mortgage Fraud</h4>
+  <div class="line"></div>
+  <aside class="col-md-4">
+<img src="../images/lamudiPic_650395072.jpg" class="img-responsive">
+</aside>
+<article class="col-md-8 blog">
+ <p>Kenya’s property market is thriving and everyone is looking to have a piece of this vibrant sector. With good economic environment and financial systems, there has been an increase in the mortgage uptake. According to the Central Bank of Kenya, the demand for mortgages in the country stands at 80,000 facilities every year - a clear indication of the strong..... <a href="http://jamhurimagazine.com/index.php/kenya-real-estate/5226-how-to-avoid-falling-victim-to-mortgage-fraud.html" target="blank"><b>Full story</b></a> </p>
+</article>
+
+</div>
+</div>
+<aside class="col-md-3">
+<article class="blog">
+  <h2 class="aside-headings green">top stories</h2>
+  <ol class="aside-quick-links">
+  <li class="aside-link"><a href="http://jamhurimagazine.com/index.php/kenya-real-estate/5171-women-make-their-mark-on-global-real-estate.html" target="blank">Women Make Their Mark on Global Real Estate</a></li>
+  <li class="aside-link"><a href="http://jamhurimagazine.com/index.php/kenya-real-estate/5163-top-mistakes-made-by-first-time-home-buyers.html" target="blank">Top Mistakes Made by First Time Home Buyers</a></li>
+  <li class="aside-link"><a href="http://jamhurimagazine.com/index.php/kenya-real-estate/5185-how-to-spot-a-real-estate-scam.html" target="blank">How to Spot a Real Estate Scam</a></li>
+  <li class="aside-link"><a href="http://jamhurimagazine.com/index.php/kenya-real-estate/5226-how-to-avoid-falling-victim-to-mortgage-fraud.html" target="blank" >Avoid Falling Victim to Mortgage Fraud</a></li>
+  
+
+  </ol>
+</article>
+
+  <article class="blog">
+    <h2 class="aside-headings green">related stories</h2>
+  <ol class="text-capitalize aside-quick-links">
+   <li class="aside-link"><a href="http://jamhurimagazine.com/index.php/kenya-real-estate/3503-owning-apartment-in-kenya-through-sectional-titles.html" target="blank"> Owning Apartment in Kenya Through Sectional Title</a></li>
+   <li class="aside-link"><a href="http://jamhurimagazine.com/index.php/kenya-real-estate/3485-land-act-2012-on-private-ownership-of-large-tracts-of-land.html" target="blank">Land Act 2012 on Private Ownership of 1000 acres & Above.</a></li>
+   <li class="aside-link"><a href="http://jamhurimagazine.com/index.php/kenya-real-estate/3484-land-act-2012-on-administration-management-of-private-land.html" target="blank">Land Act 2012 on Administration & Management of Private Land</a></li>
+   <li class="aside-link"><a href="http://jamhurimagazine.com/index.php/kenya-real-estate/4760-dangers-of-buying-land-plots-for-speculation.html" target="blank">Dangers of Buying Land Plots for Speculation</a></li>
+  
+ </ol>
+  </article>
+  <article class="blog">
+    <h2 class="aside-headings green">more blogs post</h2>
+ <ol class="text-capitalize aside-quick-links">
+   <li class="aside-link">january</li>
+   <li class="aside-link">february</li>
+   <li class="aside-link">march</li>
+   <li class="aside-link">april</li>
+   <li class="aside-link">may</li>
+ </ol>
+  </article>
+
+
+</aside>
+
+</section>
+
+
+
+
+
+
+
+
+ <!--footer-->
+ <footer class="bg-img">
+  <div class="green-overlay ">
+    <div class="container ">
+    <div class="row">
+    <div class="col-md-3">
+    <h3 class="text-left">Quick links</h3>
+     <ul class="quicklinks">
+        <li><a href="../index.html">Home</a></li><br>
+        <li><a href="aboutus.html">About Us</a></li><br>
+        <li><a href="gallery.html">gallery</a> </li><br>
+        <li><a href="blogs.html">Blogs</a></li><br>
+        <li><a href="contacts.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="col-md-3">
+    <h3 class="text-left">Facebook feeds</h3>
+      <iframe src="https://feed.mikle.com/widget/v2/55945/" height="200px" width="100%" class="fw-iframe" scrolling="no" frameborder="0"></iframe> 
+    </div>
+    <div class="col-md-3">
+    <h3 class="text-left">Pay by</h3>
+    
+    <img class="img-responsive bank-icons grey" src="../images/equitybank.png">
+     <img class="img-responsive grey" src="../images/Co.png">
+    <img class="img-responsive grey" src="../images/MasterCard.png">
+    <img class="img-responsive grey" src="../images/airtel.png">
+    <img class="img-responsive grey" src="../images/mpesa.png">
+    
+    </div>
+    <div class="col-md-3 contact-info">
+    <h3 class="text-left">Contact info</h3>
+   <span class="glyphicon glyphicon-map-marker btn"> Garden-City NBR</span>
+    <span class="glyphicon glyphicon-envelope btn"> realestate@big.com</span>
+    <span class="glyphicon glyphicon-phone-alt btn"> 000200-4433-12567</span>
+</div>
+    </div>
+    <div class="row"> 
+    <div class="col-md-10">
+      <ol class="breadcrumb">
+  <li><a href="policy.html">Terms & Policy</a></li>
+  <li><a href="contacts.html">Contact Support</a></li>
+  <li><a href="career.html">Career</a></li>
+  <li><a href="faq.html">FAQ</a></li>
+</ol>
+<p>&copy; 2017 B.I.G investments </p>
+    </div>
+    <div class="col-md-2"><a href="#"><span class="text-success lead" title="big investments goons"><img src="../images/big3.png"></span></a></div>
+    </div>
+    </div>
+ </div>
+ </footer>
+ <!--end footer-->
+
+ <!-- feedback-->
+  <div class="feedback">
+  <h4 class="green" id="green" onclick="feedback()">feedback</h4>
+   <div class="modal" id="feedback">
+     <form>
+     <span class="pull-right close" onclick="feedbackx()">&times;</span>
+     <label class="text-center">enter your detail to send feedback</label>
+       <input type="text" placeholder="name" required>
+       <input type="email" placeholder="email" required>
+       <input type="no" placeholder="phone no" required>
+       <textarea placeholder="text"></textarea>
+
+       <fieldset class="rating">
+    <legend class="rateus">Please rate us</legend>
+    <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+    <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+    <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+    <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+    <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+
+</fieldset> 
+
+       
+       <button type="submit">submit</button>
+     </form>
+   </div>
+
+ </div>
+ <!--end feedback-->
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/style.js" ></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>

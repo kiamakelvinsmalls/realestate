@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <!--meta tags-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="real estate">
+    <meta name="keyword" content="mansions,home,realestate,rentals,sales,apartments">
+    <meta name="author" content="kiamakelvin">
+    <meta http-equiv="refresh" content="100">
+ <title>B.I.G real estates</title>
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/animate.css">
+    <!--favicon link-->
+    <link rel="shortcut icon" type="x/image-icon" href="../images/favicon.ico">
+    <!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="../engine1/style.css" />
+<script type="text/javascript" src="../engine1/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+    
+  </head>
+  <!--end of head-->
+  <!--start body-->
+  <body>
+<!--start head-->
+  <header class="header" >
+  <!--header container start-->
+    <div class="container ">
+     <div class="col-md-7 icon animated zoomInRight">
+     <!--social links-->
+        <ul class="top-icons">
+          <li><a href="https://www.twitter.com" target="_blank"><img src="../images/twitter.png"></a></li>
+          <li><a href="https://www.facebook.com.com" target="_blank"><img src="../images/facebook.png"></a></li>
+          <li><a href="https://www.google.com" target="_blank"><img src="../images/googleplus.png"></a></li>
+          <li><a href="https://www.linkedin.com" target="_blank"><img src="../images/linkedin.png"></a></li>
+          <li><a href="https://www.youtube.com" target="_blank"><img src="../images/youtube.png"></a></li>
+          <li><a href="https://www.pinterest.com" target="_blank"><img src="../images/pinterest.png"></a></li>
+        </ul>
+        </div>
+        <!--end social links-->
+        <!--user account details-->
+    <div class="col-md-5 icon animated zoomInLeft">
+        <ul class="top-icons-right">
+          <li><a href="http://www.gmail.com" target="_blank"><img src="../images/emails1.png"><span> realestate@big.com</span></a></li>
+          <li><a href="#"><span onclick="login()";>login</span></a></li>
+          <li>|</li>
+          <li><a href="#" ><span  onclick="register()";>register</span></a></li>
+           <li><a href="#" ><span class="glyphicon glyphicon-search" onclick="search()" ></span></a></li>
+        </ul>
+        <form class="form-input" id="searchme">
+          <input type="text"   placeholder="search">
+          <button >search</button>
+        </form>
+    </div>
+    <!--end of account details links-->
+  </div>
+  <!--container end-->
+
+ <!-- Modal  login-->
+  <div id="login" role="dialog" class="modal">
+
+    <div class="formcontainer">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close"  onclick="shut()";>&times;</button>
+          <h4 style="color:green;" class="text-center"><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+              <input type="checkbox" value="" checked>Remember me <span class="pull-right"><a href="#">ForgotPassword?</a></span>
+            <button type="submit" class="btn btn-default btn-success btn-block" ;><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-default pull-left" onclick="shut()">Cancel</button>
+          <p>Not a member? <a href="#"><span onclick="shut();register()">Sign Up</span> </a></p>
+          
+        </div>
+      </div>
+    </div>
+  </div> 
+  <!-- Modal  register-->
+  <div id="register" role="dialog" class="modal">
+
+    <div class="formcontainer">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close"  onclick="shut()";>&times;</button>
+          <h4 style="color:green;" class="text-center"><span class="glyphicon glyphicon-user"></span> signup</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+              <input type="text" class="form-control"  placeholder="first name">
+              <input type="text" class="form-control"  placeholder="last name">
+              <input type="text" class="form-control"  placeholder="email">
+              <input type="text" class="form-control"  placeholder="phone number">
+              <input type="radio"  name="gender" value="male" >  male
+              <input type="radio"  name="gender" value="female" >  female
+              <input type="date" class="pull-right">
+              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+              <input type="text" class="form-control" id="psw" placeholder="confirm password">
+              
+            <button type="submit" class="btn btn-default btn-success btn-block" ;> create account</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-default pull-left" onclick="shut()">Cancel</button>
+          <p>Have an account? <a href="#"><span onclick="shut();login()">Log In</a></span></p>
+          
+        </div>
+      </div>
+    </div>
+  </div> 
+<!--end modals-->
+  </header>
+<!-- nav bar-->
+<div class="container">
+<nav class="navbar navbar-default ">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><span class="text-success " title="big investments goons"><img src="../images/big4.png"></span></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+       <ul class="nav navbar-nav link-list">
+        <li class="link "><a href="../index.html">Home<span class="sr-only">(current)</span></a></li>
+        <li class="link "><a href="aboutus.html">About Us</a></li>
+        <li class="link"><a href="gallery.html">property</a></li>
+        <li class="link"><a href="blogs.html">Blogs</a></li>
+        <li class="link "><a href="contacts.html">Contact Us</a> </li>
+        <li class="link current-link"><a href="faq.html">FAQ</a> </li>
+      </ul>
+      <!--contact info-->
+    <div class="conts text-align"><span class="phone-icon round"><img src="../images/phone.png"></span><span class="info">Call Us<br>0707414001<br>Sms 224433 </span>
+      </div>
+        <!--end of info-->
+      </div>
+    </div>
+    <!-- .navbar-collapse -->
+</nav>
+<!--end of nav -->
+</div>
+<section class=" listingadd bg-img ">
+<div class="green-overlay ">
+<!--search form-->
+  <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+    <!-- Indicators --> 
+    <!-- Wrapper for slides -->
+     <div class="carousel-inner" role="listbox">
+
+     <div class="item active">
+      <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house2.jpg" alt="gallery21.jpg">
+      <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished kichten<br>
+          well finished edges<br>
+        </div>
+      </div>
+      </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house3.jpg" alt="gallery21.jpg">
+     <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished settingroom<br>
+          well finished edges<br>
+          good air circulation<br>
+        </div>
+      </div>
+       </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house4.jpg" alt="gallery21.jpg">
+       <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full equiped bathroom<br>
+          hotshower and tab<br>
+           dressing mirror <br>
+        </div>
+      </div>
+       </div>
+        <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house5.jpg" alt="gallery21.jpg">
+          <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished livingroom<br>
+          good air circulation<br>
+          enough lighting for study<br>
+        </div>
+      </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house6.jpg" alt="gallery21.jpg">
+         <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished waitingroom<br>
+          well finished edges<br>
+          good air circulation<br>
+        </div>
+      </div>
+        </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house7.jpg" alt="gallery21.jpg">
+         <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished bedroom<br>
+          beautiful view<br>
+          good air circulation<br>
+        </div>
+      </div>
+       </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house2.jpg" alt="gallery21.jpg">
+        <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished kichten<br>
+          well finished edges<br>
+        </div>
+      </div>
+       </div>
+        <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house3.jpg" alt="gallery21.jpg">
+         <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished settingroom<br>
+          well finished edges<br>
+          good air circulation<br>
+        </div>
+      </div>
+        </div>
+      </div>
+    
+      <div class="item">
+        <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house7.jpg" alt="gallery21.jpg">
+        <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished bedroom<br>
+          beautiful view<br>
+          good air circulation<br>
+        </div>
+      </div>
+        </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house6.jpg" alt="gallery21.jpg">
+       <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished waitingroom<br>
+          well finished edges<br>
+          good air circulation<br>
+        </div>
+      </div>
+
+       </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house4.jpg" alt="gallery21.jpg">
+       <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full equiped bathroom<br>
+          hotshower and tab<br>
+           dressing mirror <br>
+        </div>
+      </div>
+       </div>
+        <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house3.jpg" alt="gallery21.jpg">
+        <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished kichten<br>
+          well finished edges<br>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  <div>
+    <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel2" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a></div>
+</div>
+  
+  </div>
+  <!--end search container-->
+  </section>
+    <nav  id="breadcrumb-fixed" class="breadcrumb breadcrumb-fixed">
+  <a class="breadcrumb-item" href="../index.html">Home</a>
+   <a class="breadcrumb-item" href="aboutus.html">About Us</a>
+    <a class="breadcrumb-item" href="gallery.html">property</a>
+    <a class="breadcrumb-item" href="blogs.html">Blogs</a>
+    <a class="breadcrumb-item" href="contacts.html">Contact Us</a>
+  <span class="breadcrumb-item active">FAQ</span>
+</nav>
+<div class="container">
+
+<!--form silde menu for quick access-->
+  <section class="col-md-3 faq-aside">
+  <h3 class="aside-headings green animated1 bounce">Frequently asked topics</h3>
+  <ul class="aside-quick-links smooth-scroll list-unstyled">
+    <li class="aside-link active scroll"><a href="#1"><h5>About B.I.G Realestate</h5></a></li>
+    <li class="aside-link scroll"><a href="#2"><h5>How to create an account</h5></a></li>
+    <li class="aside-link scroll"><a href="#3"><h5>How to buy </h5></a></li>
+    <li class="aside-link scroll"><a href="#4"><h5>how to rent </h5></a></li>
+    <li class="aside-link scroll"><a href="#5"><h5>How to pay </h5></a></li>
+    <li class="aside-link scroll"><a href="#6"><h5>when to view</h5></a></li>
+    <li class="aside-link scroll"><a href="#7"><h5>why B.I.G Realestate</h5></a></li>
+    <li class="aside-link scroll"><a href="#8"><h5>tutorial on use</h5></a></li>
+  </ul>
+    
+  </section>
+
+
+<section class="col-md-9">
+<form class=" faq-search">
+ <input class="form-control pull-left" type="type" placeholder="search topic?">
+ <button class="btn faq-btn">search</button>
+</form>
+ <div id="accordion">
+    <div id="1" class="panel panel-success">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">About B.I.G Realestates?</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">Was founded to help clients find quality housing fast as their time is less spent looking for house thus ensuaring friendly working environment</div>
+      </div>
+    </div>
+    <div id="2" class="panel  panel-success" title="click on question to view answer">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">how to create an account?</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">click on the register link on the top left<br>
+        <img src="../images/Screenshot (2).jpg"><br>
+             enter your details on the  create account modal pop up the click create
+        <img src="../images/Screenshot (3).jpg"> <br>
+        now click on login and enter your new created account details
+        </div>
+      </div>
+    </div>
+    <div id="3" class="panel  panel-success" title="click on question to view answer">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">how to buy ?</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse" title="click on question to view answer">
+        <div class="panel-body"> Register with us <br>
+        login using your account details<br>
+        view available houses and order or seek help by getting and agent by sending use a messages  </div>
+      </div>
+    </div>
+    <div id="4" class="panel  panel-success" title="click on question to view answer">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">how to rent?</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse" title="click on question to view answer">
+        <div class="panel-body">
+          register for an account<br>
+          login with your account<br>
+          choose a house or get agent to help get a house<br>
+          confirm house by visiting the house with help of agent<br>
+          pay for the house using one of our payment mode<br>
+          one can move in after payment<br>
+          title issues after 7 days from purchase day
+        </div>
+      </div>
+    </div>
+    <div id="5" class="panel  panel-success " title="click on question to view answer">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">how to pay?</a>
+        </h4>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse" title="click on question to view answer">
+        <div class="panel-body">
+          get our bank detais from our contact page
+          one can deposit cash to our bank accounts<br> 
+          then  present a recipt of payment to our agent of  an mpesa  or airtel money message to an agent for processing a B.I.G recipt is then issued thus purchase cumpelet fot purchase an   title deed is oddered
+
+        </div>
+      </div>
+    </div>
+    <div id="6" class="panel  panel-success" title="click on question to view answer">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">when to view</a>
+        </h4>
+      </div>
+      <div id="collapse6" class="panel-collapse collapse" title="click on question to view answer">
+        <div class="panel-body">house visits are avilable  every for free as from 8am to 7 pm <br>
+        clients who want to visit houses during weeks days are allowed to visit but will cater for all expenses issued  </div>
+      </div>
+    </div>
+    <div id="7" class="panel  panel-success" title="click on question to view answer">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">why  B.I.G Realeastate</a>
+        </h4>
+      </div>
+      <div id="collapse7" class="panel-collapse collapse" title="click on question to view answer">
+        <div class="panel-body">having a wide variety of houses ranging from mansions to studio appartments in all the major towns and cities we garantee to find you a home as quick as within 24  g hours </div>
+      </div>
+    </div>
+    <div id="8" class="panel  panel-success" title="click on question to view answer">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">tutorial on use</a>
+        </h4>
+      </div>
+      <div id="collapse8" class="panel-collapse collapse" title="click on question to view answer">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+  
+  </div> 
+  </section>
+
+  </div>
+
+ <!--footer-->
+ <footer class="bg-img">
+  <div class="green-overlay ">
+    <div class="container ">
+    <div class="row">
+    <div class="col-md-3">
+    <h3 class="text-left">Quick links</h3>
+  <ul class="quicklinks">
+        <li><a href="../index.html">Home</a></li><br>
+        <li><a href="aboutus.html">About Us</a></li><br>
+        <li><a href="gallery.html">gallery</a> </li><br>
+        <li><a href="blogs.html">Blogs</a></li><br>
+        <li><a href="contacts.html">Contact Us</a></li>
+      </ul>
+   
+    </div>
+    <div class="col-md-3">
+     <h3 class="text-left">Facebook feeds</h3>
+     <iframe src="https://feed.mikle.com/widget/v2/55945/" height="200px" width="100%" class="fw-iframe" scrolling="no" frameborder="0"></iframe> 
+    </div>
+    <div class="col-md-3">
+    <h3 class="text-left">Pay by</h3>
+    
+    <img class="img-responsive bank-icons grey" src="../images/equitybank.png">
+     <img class="img-responsive grey" src="../images/Co.png">
+    <img class="img-responsive grey" src="../images/MasterCard.png">
+    <img class="img-responsive grey" src="../images/airtel.png">
+    <img class="img-responsive grey" src="../images/mpesa.png">
+    
+    </div>
+    <div class="col-md-3 contact-info">
+    <h3 class="text-left">Contact info</h3>
+   <span class="glyphicon glyphicon-map-marker btn"> Garden-City NBR</span>
+    <span class="glyphicon glyphicon-envelope btn"> realestate@big.com</span>
+    <span class="glyphicon glyphicon-phone-alt btn"> 000200-4433-12567</span>
+</div>
+    </div>
+    <div class="row"> 
+    <div class="col-md-10">
+      <ol class="breadcrumb">
+  <li><a href="policy.html">Terms & Policy</a></li>
+  <li><a href="contacts.html">Contact Support</a></li>
+  <li><a href="career.html">Career</a></li>
+  <li><a href="faq.html">FAQ</a></li>
+</ol>
+<p>&copy; 2017 B.I.G investments </p>
+    </div>
+    <div class="col-md-2"><a href="#"><span class="text-success lead" title="big investments goons"><img src="../images/big3.png"></span></a></div>
+    </div>
+    </div>
+ </div>
+ </footer>
+ <!--end footer-->
+
+ <!-- feedback-->
+  <div class="feedback">
+  <h4 class="green" id="green" onclick="feedback()">feedback</h4>
+   <div class="modal" id="feedback">
+     <form>
+     <span class="pull-right close" onclick="feedbackx()">&times;</span>
+     <label class="text-center">enter your detail to send feedback</label>
+       <input type="text" placeholder="name" required>
+       <input type="email" placeholder="email" required>
+       <input type="no" placeholder="phone no" required>
+       <textarea placeholder="text"></textarea>
+
+       <fieldset class="rating">
+    <legend class="rateus">Please rate us</legend>
+    <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+    <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+    <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+    <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+    <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+
+</fieldset> 
+
+       
+       <button type="submit">submit</button>
+     </form>
+   </div>
+
+ </div>
+ <!--end feedback-->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/style.js" ></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>

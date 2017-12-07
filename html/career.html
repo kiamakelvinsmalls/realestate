@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <!--meta tags-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="real estate">
+    <meta name="keyword" content="mansions,home,realestate,rentals,sales,apartments">
+    <meta name="author" content="kiamakelvin">
+    <meta http-equiv="refresh" content="100">
+ <title>B.I.G real estates</title>
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/animate.css">
+    <!--favicon link-->
+    <link rel="shortcut icon" type="x/image-icon" href="../images/favicon.ico">
+    <!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="../engine1/style.css" />
+<script type="text/javascript" src="../engine1/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+    
+  </head>
+  <!--end of head-->
+  <!--start body-->
+  <body>
+<!--start head-->
+  <header class="header" >
+  <!--header container start-->
+    <div class="container ">
+     <div class="col-md-7 icon animated zoomInRight">
+     <!--social links-->
+        <ul class="top-icons">
+          <li><a href="https://www.twitter.com" target="_blank"><img src="../images/twitter.png"></a></li>
+          <li><a href="https://www.facebook.com.com" target="_blank"><img src="../images/facebook.png"></a></li>
+          <li><a href="https://www.google.com" target="_blank"><img src="../images/googleplus.png"></a></li>
+          <li><a href="https://www.linkedin.com" target="_blank"><img src="../images/linkedin.png"></a></li>
+          <li><a href="https://www.youtube.com" target="_blank"><img src="../images/youtube.png"></a></li>
+          <li><a href="https://www.pinterest.com" target="_blank"><img src="../images/pinterest.png"></a></li>
+        </ul>
+        </div>
+        <!--end social links-->
+        <!--user account details-->
+    <div class="col-md-5 icon animated zoomInLeft">
+        <ul class="top-icons-right">
+          <li><a href="http://www.gmail.com" target="_blank"><img src="../images/emails1.png"><span> realestate@big.com</span></a></li>
+          <li><a href="#"><span onclick="login()";>login</span></a></li>
+          <li>|</li>
+          <li><a href="#" ><span  onclick="register()";>register</span></a></li>
+              <li><a href="#" ><span class="glyphicon glyphicon-search" onclick="search()" ></span></a></li>
+        </ul>
+        <form class="form-input" id="searchme">
+          <input type="text"   placeholder="search">
+          <button >search</button>
+        </form>
+    </div>
+    <!--end of account details links-->
+  </div>
+  <!--container end-->
+
+ <!-- Modal  login-->
+  <div id="login" role="dialog" class="modal">
+
+    <div class="formcontainer">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close"  onclick="shut()";>&times;</button>
+          <h4 style="color:green;" class="text-center"><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+              <input type="checkbox" value="" checked>Remember me <span class="pull-right"><a href="#">ForgotPassword?</a></span>
+            <button type="submit" class="btn btn-default btn-success btn-block" ;><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-default pull-left" onclick="shut()">Cancel</button>
+          <p>Not a member? <a href="#"><span onclick="shut();register()">Sign Up</span> </a></p>
+          
+        </div>
+      </div>
+    </div>
+  </div> 
+  <!-- Modal  register-->
+  <div id="register" role="dialog" class="modal">
+
+    <div class="formcontainer">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close"  onclick="shut()";>&times;</button>
+          <h4 style="color:green;" class="text-center"><span class="glyphicon glyphicon-user"></span> signup</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+              <input type="text" class="form-control"  placeholder="first name">
+              <input type="text" class="form-control"  placeholder="last name">
+              <input type="text" class="form-control"  placeholder="email">
+              <input type="text" class="form-control"  placeholder="phone number">
+              <input type="radio"  name="gender" value="male" >  male
+              <input type="radio"  name="gender" value="female" >  female
+              <input type="date" class="pull-right">
+              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+              <input type="text" class="form-control" id="psw" placeholder="confirm password">
+              
+            <button type="submit" class="btn btn-default btn-success btn-block" ;> create account</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-default pull-left" onclick="shut()">Cancel</button>
+          <p>Have an account? <a href="#"><span onclick="shut();login()">Log In</a></span></p>
+          
+        </div>
+      </div>
+    </div>
+  </div> 
+<!--end modals-->
+  </header>
+<!-- nav bar-->
+<div class="container">
+<nav class="navbar navbar-default ">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><span class="text-success " title="big investments goons"><img src="../images/big4.png"></span></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav link-list">
+        <li class="link "><a href="../index.html">Home<span class="sr-only">(current)</span></a></li>
+        <li class="link "><a href="aboutus.html">About Us</a></li>
+       <li class="link"><a href="html/gallery.html">property</a></li>
+        <li class="link"><a href="blogs.html">Blogs</a></li>
+        <li class="link"><a href="contacts.html">Contact Us</a> </li>
+        <li class="link"><a href="faq.html">FAQ</a> </li>
+      </ul>
+      <!--contact info-->
+    <div class="conts text-align"><span class="phone-icon round"><img src="../images/phone.png"></span><span class="info">Call Us<br>0707414001<br>Sms 224433 </span>
+      </div>
+        <!--end of info-->
+      </div>
+    </div>
+    <!-- .navbar-collapse -->
+</nav>
+<!--end of nav -->
+</div>
+<section class="col-md-12 listingadd bg-img ">
+<div class="green-overlay container-fluid">
+<!--search form-->
+  <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+    <!-- Indicators --> 
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+     <div class="item active">
+      <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house2.jpg" alt="gallery21.jpg">
+      <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished kichten<br>
+          well finished edges<br>
+        </div>
+      </div>
+      </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house3.jpg" alt="gallery21.jpg">
+     <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished settingroom<br>
+          well finished edges<br>
+          good air circulation<br>
+        </div>
+      </div>
+       </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house4.jpg" alt="gallery21.jpg">
+       <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full equiped bathroom<br>
+          hotshower and tab<br>
+           dressing mirror <br>
+        </div>
+      </div>
+       </div>
+        <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house5.jpg" alt="gallery21.jpg">
+          <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished livingroom<br>
+          good air circulation<br>
+          enough lighting for study<br>
+        </div>
+      </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house6.jpg" alt="gallery21.jpg">
+         <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished waitingroom<br>
+          well finished edges<br>
+          good air circulation<br>
+        </div>
+      </div>
+        </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house7.jpg" alt="gallery21.jpg">
+         <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished bedroom<br>
+          beautiful view<br>
+          good air circulation<br>
+        </div>
+      </div>
+       </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house2.jpg" alt="gallery21.jpg">
+        <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished kichten<br>
+          well finished edges<br>
+        </div>
+      </div>
+       </div>
+        <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house3.jpg" alt="gallery21.jpg">
+         <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished settingroom<br>
+          well finished edges<br>
+          good air circulation<br>
+        </div>
+      </div>
+        </div>
+      </div>
+    
+      <div class="item">
+        <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house7.jpg" alt="gallery21.jpg">
+        <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished bedroom<br>
+          beautiful view<br>
+          good air circulation<br>
+        </div>
+      </div>
+        </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house6.jpg" alt="gallery21.jpg">
+       <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished waitingroom<br>
+          well finished edges<br>
+          good air circulation<br>
+        </div>
+      </div>
+
+       </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house4.jpg" alt="gallery21.jpg">
+       <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full equiped bathroom<br>
+          hotshower and tab<br>
+           dressing mirror <br>
+        </div>
+      </div>
+       </div>
+        <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house3.jpg" alt="gallery21.jpg">
+        <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished kichten<br>
+          well finished edges<br>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+
+  <div>
+    <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel2" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a></div>
+</div>
+  
+  </div>
+  </section>
+  <nav  id="breadcrumb-fixed" class="breadcrumb breadcrumb-fixed">
+  <a class="breadcrumb-item" href="../index.html">Home</a>
+  <span class="breadcrumb-item active">careers</span>
+</nav>
+
+<div class="container">
+<section class="col-md-3" faq-aside>
+<div class="row">
+<h3 class="aside-headings green animated1 bounce">jobs</h3>
+<ul class="aside-quick-links">
+  <li class="aside-link"><a href="#at"><h5> Management jobs</h5></a></li>
+  <li class="aside-link"><a href="#2"><h5>Agent jobs</h5> </a> </li>
+  <li class="aside-link"><a href="#3"> <h5>Couriers and Messengers </h5> </a> </li>
+  <li class="aside-link"><a href="#4"><h5>Casual job </h5> </a></li>
+  <li class="aside-link"><a href="#5"><h5>terms of hire</h5> </a> </li>
+</ul>
+  </div>
+  <div class="row">
+<h3 class="aside-headings green animated1 bounce">Resource Downloads</h3>
+<ul class="aside-quick-links">
+  <li class="aside-link"><a href="../doc/floorplan-final.pdf" target="_blank"><h5> floor plans</h5></a></li>
+  <li class="aside-link"><a href="../doc/List of Real Estate Agents.pdf" target="_blank"><h5>Agent list</h5> </a> </li>
+  <li class="aside-link"><a href="../doc/House Plans for Narrow and Small Lots.pdf" target="_blank"> <h5>house plans on narrow & small plots </h5> </a> </li>
+  <li class="aside-link"><a href="../doc/TheBlueBookofHomePlans_1937.pdf" target="_blank"><h5> homes blue prints  </h5> </a></li>
+  <li class="aside-link"><a href="../doc/Estate Agents Act 17 of1984.pdf" target="_blank"><h5>real estate agent act</h5> </a> </li>
+  <li class="aside-link"><a href="../doc/2017 MAR Role of Real Estate Agents.pdf" target="_blank"><h5>roles of real estates</h5> </a> </li>
+  <li class="aside-link"><a href="../doc/Book-Of-Beautiful-Homes_alleen_santpoort.pdf" target="_blank"><h5>Beautiful homes</h5> </a> </li>
+
+
+</ul>
+  </div>
+</section>
+<section class="col-md-9">
+<ol>
+<li id="1"> 
+<h3>Openning</h3>
+    <article>
+ no openning  available for now
+  </article></li>
+  <li id="2">
+  <h3> Manager position requirements</h3>
+    <article>
+    <h5><b>Career Definition </b></h5>
+
+Real estate manager will oversee the operational aspects of commercial and residential properties and is responsible for maintaining the premises and increasing their value. you will  provide services for multiple buildings or locations. Job duties associated with large properties can include training and supervising staff members and groundskeepers.also responsible for daily services and minor repairs. additional activities can include making mortgage, tax and insurance payments, as well as other bookkeeping activities. 
+  <h5><b>Education Required</b></h5>
+ applicants should have a bachelor's degree in real estate, finance or business administration. Managers often receive on-the-job training, including how to operate and repair any machines or equipment located on the premises.
+<h5><b>Skills Required</b></h5>
+
+ must have excellent interpersonal and analytical skills, including the ability to communicate with owners, staff and tenants in an effective and efficient manner. Computer literacy, record keeping and strong leadership abilities are also required. Manual dexterity and knowledge of maintenance tools and equipment may be helpful in more hands-on positions. 
+  </article></li>
+  <li id="3"> 
+<h3>Agent jobs</h3>
+    <article>
+  <h5><b>Career Definition</b></h5>
+  Rent, buy, or sell property for clients. Perform duties, such as study property listings, interview prospective clients, accompany clients to property site, discuss conditions of sale, and draw up real estate contracts. Includes agents who represent buyer. 
+
+
+  <h5><b>Responsibilities</b></h5>
+      <ol  class="requirements" >
+        <li>Provide guidance and assist sellers and buyers in marketing and purchasing property for the right price under the best terms</li>
+         <li> Determine clients’ needs and financials abilities to propose solutions that suit them</li> 
+         <li>Intermediate negotiation processes, consult clients on market conditions, prices, mortgages, legal requirements and related matters, ensuring a fair and honest dealing</li>
+          <li> Perform comparative market analysis to estimate properties’ value</li>
+           <li>Display and market real property to possible buyers</li>
+            <li>Prepare necessary paperwork (contracts, leases, deeds, closing statements etc)</li>
+             <li>Manage property auctions or exchanges</li>
+              <li>Maintain and update listings of available properties</li>
+               <li>Cooperate with appraisers, escrow companies, lenders and home inspectors</li>
+               <li>Develop networks and cooperate with attorneys, mortgage lenders and contractors</li>
+                <li>Promote sales through advertisements, open houses and listing services</li>
+                 <li>Remain knowledgeable about real estate markets and best practices</li>
+      </ol>
+    
+   
+
+  <h5><b>Requirements</b></h5>
+    <ol class="requirements" >
+      <li> Proven working experience as a real estate agent or real estate salesperson</li>
+      <li>Proven track of successful sales record</li>
+      <li> Ability to work independently combined with excellent interpersonal skills</li>
+       <li>Strong sales, negotiation and communication skills</li>
+        <li> Pleasant and trustworthy</li>
+         <li>MS Office familiarity</li>
+         <li>Real estate agent’s or broker’s licence</li>
+    </ol>
+  
+  </article></li>
+  <li id="4"> 
+<h3>Couriers and Messengers </h3>
+    <article>
+    <h5><b>description</b></h5>
+ Pick up and deliver messages, documents, packages, and other items between offices or departments within an establishment or directly to other business concerns, traveling by foot, bicycle, motorcycle, automobile, or public conveyance
+
+  <h5><b>Requirements</b></h5>
+  <ol class="requirements">
+    <li>atlist A level education</li>
+    <li>good written and spoken english</li>
+    <li>Pleasant and trustworthy</li>
+    <li>MS Office familiarity</li>
+  </ol>
+  </article></li>
+  <li id="5"> 
+<h3>Casual job </h3>
+    <article>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </article></li>
+
+<h3>job resources downloads </h3>
+    <article>
+<embed src="../doc/PAYEGUIDE.pdf" type="application/pdf"   height="300px" width="100%" class="responsive">
+<a href="../doc/PAYEGUIDE.pdf">download</a>
+  </article></li>
+  </ol>
+
+</section>
+
+
+</div>
+
+
+
+ <!--footer-->
+ <footer class="bg-img">
+  <div class="green-overlay ">
+    <div class="container ">
+    <div class="row">
+    <div class="col-md-3">
+    <h3 class="text-left">Quick links</h3>
+     <ul class="quicklinks">
+        <li><a href="../index.html">Home</a></li><br>
+        <li><a href="aboutus.html">About Us</a></li><br>
+        <li><a href="gallery.html">gallery</a> </li><br>
+        <li><a href="blogs.html">Blogs</a></li><br>
+        <li><a href="contacts.html">Contact Us</a></li>
+      </ul>
+    <span class="pull-right" title="read more about us">About</span>
+    </div>
+    <div class="col-md-3">
+     <h3 class="text-left">Facebook feeds</h3>
+    <iframe src="https://feed.mikle.com/widget/v2/55945/" height="200px" width="100%" class="fw-iframe" scrolling="no" frameborder="0"></iframe> 
+    </div>
+    <div class="col-md-3">
+    <h3 class="text-left">Pay by</h3>
+    
+    <img class="img-responsive bank-icons grey" src="../images/equitybank.png">
+     <img class="img-responsive grey" src="../images/Co.png">
+    <img class="img-responsive grey" src="../images/MasterCard.png">
+    <img class="img-responsive grey" src="../images/airtel.png">
+    <img class="img-responsive grey" src="../images/mpesa.png">
+    
+    </div>
+    <div class="col-md-3 contact-info">
+    <h3 class="text-left">Contact info</h3>
+   <span class="glyphicon glyphicon-map-marker btn"> Garden-City NBR</span>
+    <span class="glyphicon glyphicon-envelope btn"> realestate@big.com</span>
+    <span class="glyphicon glyphicon-phone-alt btn"> 000200-4433-12567</span>
+</div>
+    </div>
+    <div class="row"> 
+    <div class="col-md-10">
+      <ol class="breadcrumb">
+  <li><a href="policy.html">Terms & Policy</a></li>
+  <li><a href="contacts.html">Contact Support</a></li>
+  <li><a href="career.html">Career</a></li>
+  <li><a href="faq.html">FAQ</a></li>
+</ol>
+<p>&copy; 2017 B.I.G investments </p>
+    </div>
+    <div class="col-md-2"><a href="#"><span class="text-success lead" title="big investments goons"><img src="../images/big3.png"></span></a></div>
+    </div>
+    </div>
+ </div>
+ </footer>
+ <!--end footer-->
+
+ <!-- feedback-->
+  <div class="feedback">
+  <h4 class="green" id="green" onclick="feedback()">feedback</h4>
+   <div class="modal" id="feedback">
+     <form>
+     <span class="pull-right close" onclick="feedbackx()">&times;</span>
+     <label class="text-center">enter your detail to send feedback</label>
+       <input type="text" placeholder="name" required>
+       <input type="email" placeholder="email" required>
+       <input type="no" placeholder="phone no" required>
+       <textarea placeholder="text"></textarea>
+
+       <fieldset class="rating">
+    <legend class="rateus">Please rate us</legend>
+    <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+    <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+    <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+    <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+    <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+
+</fieldset> 
+
+       
+       <button type="submit">submit</button>
+     </form>
+   </div>
+
+ </div>
+ <!--end feedback-->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/style.js" ></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>

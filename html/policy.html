@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <!--meta tags-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="real estate">
+    <meta name="keyword" content="mansions,home,realestate,rentals,sales,apartments">
+    <meta name="author" content="kiamakelvin">
+    <meta http-equiv="refresh" content="100">
+ <title>B.I.G real estates</title>
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/animate.css">
+    <!--favicon link-->
+    <link rel="shortcut icon" type="x/image-icon" href="../images/favicon.ico">
+    <!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="../engine1/style.css" />
+<script type="text/javascript" src="../engine1/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+    
+  </head>
+  <!--end of head-->
+  <!--start body-->
+  <body>
+<!--start head-->
+  <header class="header" >
+  <!--header container start-->
+    <div class="container ">
+     <div class="col-md-7 icon animated zoomInRight">
+     <!--social links-->
+        <ul class="top-icons">
+          <li><a href="https://www.twitter.com" target="_blank"><img src="../images/twitter.png"></a></li>
+          <li><a href="https://www.facebook.com.com" target="_blank"><img src="../images/facebook.png"></a></li>
+          <li><a href="https://www.google.com" target="_blank"><img src="../images/googleplus.png"></a></li>
+          <li><a href="https://www.linkedin.com" target="_blank"><img src="../images/linkedin.png"></a></li>
+          <li><a href="https://www.youtube.com" target="_blank"><img src="../images/youtube.png"></a></li>
+          <li><a href="https://www.pinterest.com" target="_blank"><img src="../images/pinterest.png"></a></li>
+        </ul>
+        </div>
+        <!--end social links-->
+        <!--user account details-->
+    <div class="col-md-5 icon animated zoomInLeft">
+        <ul class="top-icons-right">
+          <li><a href="http://www.gmail.com" target="_blank"><img src="../images/emails1.png"><span> realestate@big.com</span></a></li>
+          <li><a href="#"><span onclick="login()";>login</span></a></li>
+          <li>|</li>
+          <li><a href="#" ><span  onclick="register()";>register</span></a></li>
+           <li><a href="#" ><span class="glyphicon glyphicon-search" onclick="search()" ></span></a></li>
+        </ul>
+        <form class="form-input" id="searchme">
+          <input type="text"   placeholder="search">
+          <button >search</button>
+        </form>
+    </div>
+    <!--end of account details links-->
+  </div>
+  <!--container end-->
+
+ <!-- Modal  login-->
+  <div id="login" role="dialog" class="modal">
+
+    <div class="formcontainer">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close"  onclick="shut()";>&times;</button>
+          <h4 style="color:green;" class="text-center"><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+              <input type="checkbox" value="" checked>Remember me <span class="pull-right"><a href="#">ForgotPassword?</a></span>
+            <button type="submit" class="btn btn-default btn-success btn-block" ;><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-default pull-left" onclick="shut()">Cancel</button>
+          <p>Not a member? <a href="#"><span onclick="shut();register()">Sign Up</span> </a></p>
+          
+        </div>
+      </div>
+    </div>
+  </div> 
+  <!-- Modal  register-->
+  <div id="register" role="dialog" class="modal">
+
+    <div class="formcontainer">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close"  onclick="shut()";>&times;</button>
+          <h4 style="color:green;" class="text-center"><span class="glyphicon glyphicon-user"></span> signup</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+              <input type="text" class="form-control"  placeholder="first name">
+              <input type="text" class="form-control"  placeholder="last name">
+              <input type="text" class="form-control"  placeholder="email">
+              <input type="text" class="form-control"  placeholder="phone number">
+              <input type="radio"  name="gender" value="male" >  male
+              <input type="radio"  name="gender" value="female" >  female
+              <input type="date" class="pull-right">
+              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+              <input type="text" class="form-control" id="psw" placeholder="confirm password">
+              
+            <button type="submit" class="btn btn-default btn-success btn-block" ;> create account</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-default pull-left" onclick="shut()">Cancel</button>
+          <p>Have an account? <a href="#"><span onclick="shut();login()">Log In</a></span></p>
+          
+        </div>
+      </div>
+    </div>
+  </div> 
+<!--end modals-->
+  </header>
+<!-- nav bar-->
+<div class="container">
+<nav class="navbar navbar-default ">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><span class="text-success " title="big investments goons"><img src="../images/big4.png"></span></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+       <ul class="nav navbar-nav link-list">
+        <li class="link "><a href="../index.html">Home<span class="sr-only">(current)</span></a></li>
+        <li class="link "><a href="aboutus.html">About Us</a></li>
+       <li class="link"><a href="gallery.html">property</a></li>
+        <li class="link"><a href="blogs.html">Blogs</a></li>
+        <li class="link "><a href="contacts.html">Contact Us</a> </li>
+        <li class="link"><a href="faq.html">FAQ</a> </li>
+      </ul>
+      <!--contact info-->
+    <div class="conts text-align"><span class="phone-icon round"><img src="../images/phone.png"></span><span class="info">Call Us<br>0707414001<br>Sms 224433 </span>
+      </div>
+        <!--end of info-->
+      </div>
+    </div>
+    <!-- .navbar-collapse -->
+</nav>
+<!--end of nav -->
+</div>
+<section class=" listingadd bg-img ">
+<div class="green-overlay ">
+<!--search form-->
+  <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+    <!-- Indicators --> 
+    <!-- Wrapper for slides -->
+ <div class="carousel-inner" role="listbox">
+
+     <div class="item active">
+      <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house2.jpg" alt="gallery21.jpg">
+      <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished kichten<br>
+          well finished edges<br>
+        </div>
+      </div>
+      </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house3.jpg" alt="gallery21.jpg">
+     <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished settingroom<br>
+          well finished edges<br>
+          good air circulation<br>
+        </div>
+      </div>
+       </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house4.jpg" alt="gallery21.jpg">
+       <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full equiped bathroom<br>
+          hotshower and tab<br>
+           dressing mirror <br>
+        </div>
+      </div>
+       </div>
+        <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house5.jpg" alt="gallery21.jpg">
+          <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished livingroom<br>
+          good air circulation<br>
+          enough lighting for study<br>
+        </div>
+      </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house6.jpg" alt="gallery21.jpg">
+         <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished waitingroom<br>
+          well finished edges<br>
+          good air circulation<br>
+        </div>
+      </div>
+        </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house7.jpg" alt="gallery21.jpg">
+         <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished bedroom<br>
+          beautiful view<br>
+          good air circulation<br>
+        </div>
+      </div>
+       </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house2.jpg" alt="gallery21.jpg">
+        <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished kichten<br>
+          well finished edges<br>
+        </div>
+      </div>
+       </div>
+        <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house3.jpg" alt="gallery21.jpg">
+         <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished settingroom<br>
+          well finished edges<br>
+          good air circulation<br>
+        </div>
+      </div>
+        </div>
+      </div>
+    
+      <div class="item">
+        <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house7.jpg" alt="gallery21.jpg">
+        <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished bedroom<br>
+          beautiful view<br>
+          good air circulation<br>
+        </div>
+      </div>
+        </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house6.jpg" alt="gallery21.jpg">
+       <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished waitingroom<br>
+          well finished edges<br>
+          good air circulation<br>
+        </div>
+      </div>
+
+       </div>
+       <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house4.jpg" alt="gallery21.jpg">
+       <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full equiped bathroom<br>
+          hotshower and tab<br>
+           dressing mirror <br>
+        </div>
+      </div>
+       </div>
+        <div class="col-md-3 addz"><img class="img-responsive kev img-thumbnail " src="../images/featured-house3.jpg" alt="gallery21.jpg">
+        <div class="carousel-overlay">
+        <div class="carousel-overlay-text">
+          a full furnished kichten<br>
+          well finished edges<br>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+
+  <div>
+    <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel2" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a></div>
+</div>
+  
+  </div>
+  <!--end search container-->
+  </section>
+  
+  <nav  id="breadcrumb-fixed" class="breadcrumb breadcrumb-fixed">
+  <a class="breadcrumb-item" href="../index.html">Home</a>
+  <span class="breadcrumb-item active">term & policy</span>
+</nav>
+</div>
+  
+<div class="container">
+<section class="col-md-3" faq-aside>
+<h3 class="aside-headings green animated1 bounce">terms & policy links</h3>
+<ul class="aside-quick-links">
+  <li class="aside-link"><a href="#1"><h5> who may use the service</h5></a></li>
+  <li class="aside-link"><a href="#2"><h5>pivary</h5> </a> </li>
+  <li class="aside-link"><a href="#3"> <h5>collection of information</h5> </a> </li>
+  <li class="aside-link"><a href="#4"><h5>Registration & account security</h5> </a></li>
+  <li class="aside-link"><a href="#5"><h5>Payment</h5> </a> </li>
+   <li class="aside-link"><a href="#6"><h5>Termination</h5> </a> </li>
+</ul>
+  
+</section>
+<section class="col-md-9">
+<ol>
+<li id="1"> 
+<h3>Who May Use the Services</h3>
+    <article> 
+You may use the Services only if you agree to form a binding contract with B.I.G Realestate and are not a person barred from receiving services under the laws of the applicable jurisdiction. In any case, you must be at least 18 years old to use the Services. If you are accepting these Terms and using the Services on behalf of a company, organization, government, or other legal entity, you represent and warrant that you are authorized to do so.
+  </article>
+  </li>
+
+<li id="2"> 
+<h3>privacy</h3>
+    <article> 
+Our Privacy Policy describes how we handle the information you provide to us when you use our Services. You understand that through your use of the Services you consent to the collection and use (as set forth in the Privacy Policy) of this information, including the transfer of this information to the Kenyan government and/or other countries for storage, processing and use by B.I.G Realestate and its affiliates.
+  </article>
+  </li>
+<li id="3"> 
+<h3>Collection of information</h3>
+    <article> 
+B.I.G Realestate may collect the following kinds of information on behalf of your Organisation when you, your colleagues or other users access the Services:
+
+Customer data. Through use of the Services, you, your colleagues, your Organisation and other users will directly provide or submit information to ("Customer Data"). Customer Data includes, for example:
+
+    contact information, such as full name and email address;
+    demographic information;
+    username and password;
+    work title, department information and other information related to your work or Organisation;
+    all content that you create, share or post in audio, video, text, images and other media or software files that you provide on or through the Services, or that are provided on your behalf, including information in or about the content that you provide, such as the location of a photo or the date when a file was created;
+    information that other people provide about you when using the Services, including when they send a message to you or upload information about you;
+    all communications with other users of the Services;
+    user communications, feedback, suggestions and ideas sent to us;
+    billing information; and
+    information that you provide to us when you or your Organisation contact or engage us for support regarding the Services.
+  </article></li>
+  <li id="4"> 
+<h3>Registration and Account Security</h3>
+    <article>
+
+B.I.G Realestate users provide their real names and information, and we need your help to keep it that way. Here are some commitments you make to us relating to registering and maintaining the security of your account:
+ <ol>
+   <li> You will not provide any false personal information on B.I.G Realestate, or create an account for anyone other than yourself without permission.</li>
+    <li>You will not create more than one personal account.
+    If we disable your account, you will not create another one without our permission.</li>
+   <li> You will not use your personal timeline primarily for your own commercial gain, </li>
+   <li> You will keep your contact information accurate and up-to-date.</li>
+    <li>You will not share your password (or in the case of developers, your secret key), let anyone else access your account, or do anything else that might jeopardize the security of your account.</li>
+   <li>You will not transfer your account  to anyone without first getting our written permission. If you select a username or similar identifier for your account or Page, we reserve the right to remove or reclaim it if we believe it is appropriate (such as when a trademark owner complains about a username that does not closely relate to a user's actual name).</li> 
+  </ol>   
+  </article></li>
+  <li id="5"> 
+<h3>Payment</h3>
+    <article>
+ If you make a payment on B.I.G Realestate, you agree to our Payments Terms unless it is stated that other terms apply.
+ 
+  </article></li>
+  <li id="6" class="animation zoomInLeft"> 
+<h3>Termination</h3>
+    <article>
+  If you violate the letter or spirit of this Statement, or otherwise create risk or possible legal exposure for us, we can stop providing all or part of Facebook to you. We will notify you by email or at the next time you attempt to access your account. You may also delete your account or disable your application at any time. In all such cases, this Statement shall terminate, but the following provisions will still apply: 2.2, 2.4, 3-5, 9.3, and 14-18. 
+  </article></li>
+
+</section>
+
+
+</div>
+
+
+
+
+
+
+ <!--footer-->
+ <footer class="bg-img">
+  <div class="green-overlay ">
+    <div class="container ">
+    <div class="row">
+    <div class="col-md-3">
+    <h3 class="text-left">Quick links</h3>
+     <ul class="quicklinks">
+        <li><a href="../index.html">Home</a></li><br>
+        <li><a href="aboutus.html">About Us</a></li><br>
+        <li><a href="gallery.html">gallery</a> </li><br>
+        <li><a href="blogs.html">Blogs</a></li><br>
+        <li><a href="contacts.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="col-md-3">
+     <h3 class="text-left">Facebook feeds</h3>
+    <iframe src="https://feed.mikle.com/widget/v2/55945/" height="200px" width="100%" class="fw-iframe" scrolling="no" frameborder="0"></iframe>  
+    </div>
+    <div class="col-md-3">
+    <h3 class="text-left">Pay by</h3>
+    
+    <img class="img-responsive bank-icons grey" src="../images/equitybank.png">
+      <img class="img-responsive grey" src="../images/Co.png">
+    <img class="img-responsive grey" src="../images/MasterCard.png">
+    <img class="img-responsive grey" src="../images/airtel.png">
+    <img class="img-responsive grey" src="../images/mpesa.png">
+    
+    </div>
+    <div class="col-md-3 contact-info">
+    <h3 class="text-left">Contact info</h3>
+   <span class="glyphicon glyphicon-map-marker btn"> Garden-City NBR</span>
+    <span class="glyphicon glyphicon-envelope btn"> realestate@big.com</span>
+    <span class="glyphicon glyphicon-phone-alt btn"> 000200-4433-12567</span>
+</div>
+    </div>
+    <div class="row"> 
+    <div class="col-md-10">
+      <ol class="breadcrumb">
+  <li><a href="policy.html">Terms & Policy</a></li>
+  <li><a href="contacts.html">Contact Support</a></li>
+  <li><a href="career.html">Career</a></li>
+  <li><a href="faq.html">FAQ</a></li>
+</ol>
+<p>&copy; 2017 B.I.G investments </p>
+    </div>
+    <div class="col-md-2"><a href="#"><span class="text-success lead" title="big investments goons"><img src="../images/big3.png"></span></a></div>
+    </div>
+    </div>
+ </div>
+ </footer>
+ <!--end footer-->
+
+ <!-- feedback-->
+  <div class="feedback">
+  <h4 class="green" id="green" onclick="feedback()">feedback</h4>
+   <div class="modal" id="feedback">
+     <form>
+     <span class="pull-right close" onclick="feedbackx()">&times;</span>
+     <label class="text-center">enter your detail to send feedback</label>
+       <input type="text" placeholder="name" required>
+       <input type="email" placeholder="email" required>
+       <input type="no" placeholder="phone no" required>
+       <textarea placeholder="text"></textarea>
+
+       <fieldset class="rating">
+    <legend class="rateus">Please rate us</legend>
+    <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+    <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+    <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+    <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+    <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+
+</fieldset> 
+
+       
+       <button type="submit">submit</button>
+     </form>
+   </div>
+
+ </div>
+ <!--end feedback-->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/style.js" ></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>
